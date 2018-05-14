@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\version.props" />
+  <Import Project="..\nuget.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>MongoDB.Driver.GridFS</RootNamespace>
+    <AssemblyName>MongoDB.Driver.GridFS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <PackageId>MongoDB.Driver.GridFS.StrongName</PackageId>
+    <Title>MongoDB.Driver.GridFS.StrongName (Unofficial)</Title>
+    <Description>GridFS Component of the Official MongoDB .NET Driver.</Description>
+    <PackageTags>mongodb mongo nosql gridfs</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MongoDB.Driver.GridFS\**\*.cs;..\MongoDB.Shared\IncrementalMD5.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Driver.GridFS\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MongoDB.Driver.Dotnet\MongoDB.Driver.csproj" />
+  </ItemGroup>
+
+</Project>

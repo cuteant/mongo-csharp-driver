@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\version.props" />
+  <Import Project="..\nuget.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>MongoDB.Bson</RootNamespace>
+    <AssemblyName>MongoDB.Bson</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <DefineConstants>$(DefineConstants);NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <PackageId>MongoDB.Bson.StrongName</PackageId>
+    <Title>MongoDB.Bson.StrongName (Unofficial)</Title>
+    <Description>MongoDB's Official Bson Library.</Description>
+    <PackageTags>mongodb mongo nosql bson</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="$(SystemReflectionEmitLightweightPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MongoDB.Bson\**\*.cs;..\MongoDB.Shared\Hasher.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Bson\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+</Project>
