@@ -1,0 +1,8 @@
+<Project>
+  <!-- Shared Package Versions -->
+  <PropertyGroup Label="Package Versions">
+    <SystemReflectionEmitLightweightPackageVersion>4.3.0</SystemReflectionEmitLightweightPackageVersion>
+    <SystemRuntimeInteropServicesRuntimeInformationPackageVersion>4.3.0</SystemRuntimeInteropServicesRuntimeInformationPackageVersion>
+    <DnsClientPackageVersion>1.0.7</DnsClientPackageVersion>
+  </PropertyGroup>
+</Project>

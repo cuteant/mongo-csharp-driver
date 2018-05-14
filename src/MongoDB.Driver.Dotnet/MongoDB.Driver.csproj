@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\version.props" />
+  <Import Project="..\nuget.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>MongoDB.Driver</RootNamespace>
+    <AssemblyName>MongoDB.Driver</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <DefineConstants>$(DefineConstants);NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <PackageId>MongoDB.Driver.StrongName</PackageId>
+    <Title>MongoDB.Driver.StrongName (Unofficial)</Title>
+    <Description>Official .NET driver for MongoDB.</Description>
+    <PackageTags>mongodb mongo nosql</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MongoDB.Driver\**\*.cs;..\MongoDB.Shared\ApplicationNameHelper.cs;..\MongoDB.Shared\Hasher.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Driver\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MongoDB.Driver.Core.Dotnet\MongoDB.Driver.Core.csproj" />
+  </ItemGroup>
+
+</Project>

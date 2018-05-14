@@ -1,0 +1,17 @@
+<Project>
+  <!-- Set common properties regarding assembly information and nuget packages -->
+  <PropertyGroup>
+    <Authors>MongoDB, Inc.</Authors>
+    <Company>MongoDB, Inc.</Company>
+    <Product>MongoDB</Product>
+    <Copyright></Copyright>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>http://www.mongodb.org/display/DOCS/CSharp+Language+Center</PackageProjectUrl>
+    <PackageIconUrl>http://jobs.mongodb.org/files/logos/889002/889002.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl></RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <IncludeSymbols>false</IncludeSymbols>
+    <IncludeSource>false</IncludeSource>
+  </PropertyGroup>
+</Project>
