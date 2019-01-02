@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\MongoDB.Driver.Core\**\*.cs;..\MongoDB.Shared\ApplicationNameHelper.cs;..\MongoDB.Shared\Hasher.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Driver.Core\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\MongoDB.Driver.Core\**\*.cs;..\MongoDB.Shared\ApplicationNameHelper.cs;..\MongoDB.Shared\Hasher.cs;..\MongoDB.Shared\MaxTimeHelper.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Driver.Core\Properties\AssemblyInfo.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
