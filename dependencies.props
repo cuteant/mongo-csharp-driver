@@ -3,6 +3,6 @@
   <PropertyGroup Label="Package Versions">
     <SystemReflectionEmitLightweightPackageVersion>4.3.0</SystemReflectionEmitLightweightPackageVersion>
     <SystemRuntimeInteropServicesRuntimeInformationPackageVersion>4.3.0</SystemRuntimeInteropServicesRuntimeInformationPackageVersion>
-    <DnsClientPackageVersion>1.0.7</DnsClientPackageVersion>
+    <DnsClientPackageVersion>1.2.0</DnsClientPackageVersion>
   </PropertyGroup>
 </Project>
