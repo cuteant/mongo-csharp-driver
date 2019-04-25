@@ -3,7 +3,7 @@
   <Import Project="..\nuget.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>MongoDB.Bson</RootNamespace>
     <AssemblyName>MongoDB.Bson</AssemblyName>
@@ -24,7 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\MongoDB.Bson\**\*.cs;..\MongoDB.Shared\Hasher.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Bson\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\MongoDB.Shared\Hasher.cs" Link="Hasher.cs" />
+    <Compile Include="..\MongoDB.Shared\HexUtils.cs" Link="HexUtils.cs" />
+    <Compile Include="..\MongoDB.Bson\**\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\MongoDB.Bson\Properties\AssemblyInfo.cs" />
   </ItemGroup>
 
 </Project>
