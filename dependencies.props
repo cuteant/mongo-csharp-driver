@@ -4,5 +4,6 @@
     <SystemReflectionEmitLightweightPackageVersion>4.3.0</SystemReflectionEmitLightweightPackageVersion>
     <SystemRuntimeInteropServicesRuntimeInformationPackageVersion>4.3.0</SystemRuntimeInteropServicesRuntimeInformationPackageVersion>
     <DnsClientPackageVersion>1.2.0</DnsClientPackageVersion>
+    <SharpCompressPackageVersion>0.24.0</SharpCompressPackageVersion>
   </PropertyGroup>
 </Project>

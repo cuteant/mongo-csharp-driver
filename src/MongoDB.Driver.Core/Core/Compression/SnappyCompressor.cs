@@ -17,7 +17,7 @@ using System;
 using System.IO;
 using System.Threading;
 using MongoDB.Driver.Core.Misc;
-#if NET452 || NETSTANDARD2_0
+#if NET452 //|| NETSTANDARD2_0
 using Snappy;
 #endif
 
@@ -35,7 +35,7 @@ namespace MongoDB.Driver.Core.Compression
         /// <param name="output">The output stream.</param>
         public void Compress(Stream input, Stream output)
         {
-#if NET452 || NETSTANDARD2_0
+#if NET452 //|| NETSTANDARD2_0
             var uncompressedSize = (int) (input.Length - input.Position);
             var uncompressedBytes = new byte[uncompressedSize]; // does not include uncompressed message headers
             input.ReadBytes(uncompressedBytes, offset: 0, count: uncompressedSize, CancellationToken.None);
@@ -55,7 +55,7 @@ namespace MongoDB.Driver.Core.Compression
         /// <param name="output">The output stream.</param>
         public void Decompress(Stream input, Stream output)
         {
-#if NET452 || NETSTANDARD2_0
+#if NET452 //|| NETSTANDARD2_0
             var compressedSize = (int) (input.Length - input.Position);
             var compressedBytes = new byte[compressedSize];
             input.ReadBytes(compressedBytes, offset: 0, count: compressedSize, CancellationToken.None);

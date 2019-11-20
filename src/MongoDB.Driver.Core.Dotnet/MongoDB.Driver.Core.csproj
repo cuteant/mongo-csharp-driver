@@ -27,10 +27,12 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <PackageReference Include="Snappy.NET.signed" Version="1.1.1.8" />
     <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="$(SystemRuntimeInteropServicesRuntimeInformationPackageVersion)" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DnsClient" Version="$(DnsClientPackageVersion)" />
+    <PackageReference Include="SharpCompress" Version="$(SharpCompressPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup>
